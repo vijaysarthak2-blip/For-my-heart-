@@ -232,6 +232,10 @@ button.primary, button.secondary{
   font-size: 16px;
   cursor:pointer;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button.primary{
@@ -325,20 +329,33 @@ button.primary:active, button.secondary:active{
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     justify-content:center;
+    min-height: auto;
+    gap: 8px;
   }
 
   button.primary, button.secondary{
-    width: 100%;
+    flex: 0 1 auto;
+    width: auto;
+    padding: 10px 14px;
+    font-size: 14px;
+    min-height: 40px;
+    white-space: nowrap;
     justify-content:center;
   }
 
   button.primary{
     margin-left: 0;
+    max-width: 90%;
+  }
+
+  button.secondary{
+    max-width: 90%;
   }
 
   #actions #closeBtn{
     width: auto;
     margin-left: 0;
+    max-width: 90%;
   }
 }
 
